@@ -36,3 +36,11 @@ module.exports = { findNamesFromFaceIds };
 
 // findNamesFromFaceIds(['1e327b5f-dd4f-4683-8bd0-a0773d8637dd'])
 // .then(names => console.log(names));
+
+executeQuery('SELECT "name", "faceId", "image" from "Users"')
+.then(result => {
+    result.rows.forEach(e => {
+        console.log(`('${e.name}', '${e.image}', '${e.faceId}')`);
+    });
+});
+// .then(arr => console.log(arr));
