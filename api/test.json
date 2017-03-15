@@ -1,0 +1,47 @@
+[
+  {
+    "faceId": "02eef736-3b0f-4267-856e-173a70ce6488",
+    "faceRectangle": {
+      "top": 269,
+      "left": 564,
+      "width": 41,
+      "height": 41
+    }
+  },
+  {
+    "faceId": "e38cb217-28c8-4396-b643-b4db9aad0a66",
+    "faceRectangle": {
+      "top": 254,
+      "left": 662,
+      "width": 38,
+      "height": 38
+    }
+  },
+  {
+    "faceId": "8087ad2b-1f33-411f-84fb-33df1db6deae",
+    "faceRectangle": {
+      "top": 244,
+      "left": 471,
+      "width": 38,
+      "height": 38
+    }
+  },
+  {
+    "faceId": "e27b3a3c-4e38-44ef-916a-e9d311e5a4bb",
+    "faceRectangle": {
+      "top": 234,
+      "left": 375,
+      "width": 38,
+      "height": 38
+    }
+  },
+  {
+    "faceId": "0f4d02fb-ffb1-42c6-8877-2355f3182a70",
+    "faceRectangle": {
+      "top": 226,
+      "left": 520,
+      "width": 37,
+      "height": 37
+    }
+  }
+]

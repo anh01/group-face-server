@@ -33,3 +33,6 @@ const findNamesFromFaceIds = async (faceIds) => {
 };
 
 module.exports = { findNamesFromFaceIds };
+
+// findNamesFromFaceIds(['1e327b5f-dd4f-4683-8bd0-a0773d8637dd'])
+// .then(names => console.log(names));
