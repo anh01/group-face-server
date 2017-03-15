@@ -17,6 +17,7 @@
     "express": "^4.15.2",
     "express-formidable": "^1.0.0",
     "lodash": "^4.17.4",
+    "pg": "^6.1.4",
     "request-sync": "^1.0.0",
     "sync-request": "^4.0.1",
     "then-request": "^2.2.0"

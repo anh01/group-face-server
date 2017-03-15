@@ -10,8 +10,7 @@ app.get('/', (req, res) => res.send('Still alive'));
 
 app.post('/upload', formidble, require('./controller/findGroup'));
 
-app.post('/signup', formidble, require('./controller/signUp'));
-
+// app.post('/signup', formidble, require('./controller/signUp'));
 app.get('/list', (req, res) => {
   fs.readdir('./public', (err, files) => {
     if (err) return res.send(`${err} `); 
