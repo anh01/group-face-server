@@ -18,20 +18,11 @@ app.post('/upload', formidble, async (req, res) => {
     try {
         const filename = await rename(path);
         const faceIds = await getFaceIds(`https://groupkhoapham.herokuapp.com/${filename}`);
+        console.log(faceIds);
         res.send(faceIds);
     } catch (e) {
         res.send(`${e} `);
     }
-});
-
-app.get('/test/:filename', (req, res) => {
-    const { filename } = req.params;
-    getFaceIds(`https://groupkhoapham.herokuapp.com/${filename}`)
-    .then(faceIds => {
-        console.log(faceIds);
-        res.send('xong');
-    })
-    .catch(err => console.log(err));
 });
 
 app.get('/list', (req, res) => {
