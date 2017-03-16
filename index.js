@@ -2,6 +2,7 @@ const express = require('express');
 const formidble = require('express-formidable')({ uploadDir: './public' });
 const fs = require('fs');
 const jsonParser = require('body-parser').json();
+const { getAllEmployee } = require('./api/db');
 
 const app = express();
 app.use(express.static('public'));
@@ -14,6 +15,12 @@ app.post('/upload', formidble, require('./controller/findGroup'));
 // app.post('/signup', formidble, require('./controller/signUp'));
 
 app.post('/findbyimage', jsonParser, require('./controller/findByUrl'));
+
+app.get('/listEmployee', (req, res) => {
+  getAllEmployee()
+  .then(employees => res.send(employees))
+  .catch(err => res.send(err));
+});
 
 app.get('/list', (req, res) => {
   fs.readdir('./public', (err, files) => {
