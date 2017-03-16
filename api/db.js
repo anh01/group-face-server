@@ -33,19 +33,14 @@ const findNamesFromFaceIds = async (faceIds) => {
 };
 
 const getAllEmployee = () => (
-    executeQuery('SELECT id, name, image FROM public."Users";')
+    executeQuery('SELECT id, name, image, "faceId" FROM public."Users";')
     .then(result => result.rows)
 );
 
-module.exports = { findNamesFromFaceIds, getAllEmployee };
+const insertAnEmployee = (name, image, faceId) => {
+    const sql = 'INSERT INTO public."Users"(name, image, "faceId") VALUES ($1, $2, $3)';
+    const arrayData = [name, image, faceId];
+    return executeQuery(sql, arrayData);
+};
 
-// findNamesFromFaceIds(['1e327b5f-dd4f-4683-8bd0-a0773d8637dd'])
-// .then(names => console.log(names));
-
-// executeQuery('SELECT "name", "faceId", "image" from "Users"')
-// .then(result => {
-//     result.rows.forEach(e => {
-//         console.log(`('${e.name}', '${e.image}', '${e.faceId}')`);
-//     });
-// });
-// .then(arr => console.log(arr));
+module.exports = { findNamesFromFaceIds, getAllEmployee, insertAnEmployee };
