@@ -18,5 +18,9 @@ app.post('/findbyimage', jsonParser, require('./controller/findByUrl'));
 
 app.post('/createEmployee', formidble, require('./controller/createEmployee'));
 
-//Test successfully
-//app.post('/testCreate', jsonParser, require('./controller/signByUrl'));
+const getAll = require('./group/getAllPlayerImage');
+
+app.get('/getImages', async (req, res) => {
+    const data = await getAll();
+    res.send(data);
+});
