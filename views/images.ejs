@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nguyen Van Pho</title>
+        <style media="screen">
+          table {
+            border-collapse: collapse;
+          }
+
+          table, th, td {
+            border: 1px solid black;
+            padding: 3px;
+          }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>stt</td>
+                <td>image</td>
+                <td>control</td>
+            </tr>
+                <%data.forEach(image => {%>
+                    <tr>
+                        <td><%= image.id %></td>
+                        <td><img src="<%= image.filename %>"></td>
+                        <td><a href="/xoa/<%= image.id %>/<%= image.playerId %>">Xoa</a></td>
+                    </tr>
+                <%});%>
+        </table>
+    </body>
+</html>

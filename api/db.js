@@ -52,7 +52,3 @@ const insertAnEmployee = (name, image, faceId) => {
 };
 
 module.exports = { findNamesFromFaceIds, getAllEmployee, insertAnEmployee };
-
-getAllEmployee()
-.then(employees => console.log(employees))
-.catch(err => console.log(err));
